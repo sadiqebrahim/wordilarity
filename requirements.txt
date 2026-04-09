@@ -1,0 +1,9 @@
+gensim
+numpy 
+scipy 
+scikit-learn 
+nltk 
+requests 
+tqdm
+flask 
+flask-cors

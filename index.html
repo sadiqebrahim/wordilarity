@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordilarity</title>
+      <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="dashboard">
+    <div id="sidebar" class="sidebar">
+        <h2 style="color: var(--neon-blue); margin-top:0;">WORDILARITY</h2>
+        <div class="stat-card">
+            <div class="stat-label">Session ID</div>
+            <div class="stat-value" id="sid">#--</div>
+        </div>
+        <div class="stat-card" style="border-color: var(--neon-orange);">
+            <div class="stat-label">Attempts</div>
+            <div class="stat-value" id="attempt-counter">0 / 10</div>
+        </div>
+        <div class="stat-card" style="border-color: var(--neon-green);">
+            <div class="stat-label">Highest Sim</div>
+            <div class="stat-value" id="high-score">0.000</div>
+        </div>
+        <div class="stat-card" style="border-color: var(--neon-red);">
+            <div class="stat-label">Hint1</div>
+            <div id="hint1" class="stat-value hazy" style="font-size: 1.3rem;" id="high-score">nhi milega</div>
+        </div>
+        <div id="stathin2" class="stat-card hidden" style="border-color: var(--neon-red);">
+            <div class="stat-label">Hint2</div>
+            <div id="hint2" class="stat-value hazy" style="font-size: 1.3rem;" id="high-score">nhi milega</div>
+        </div>
+        <div id="stathin3" class="stat-card hidden" style="border-color: var(--neon-red);">
+            <div class="stat-label">Main Nalla Hu</div>
+            <div id="hint3" class="stat-value hazy" style="font-size: 1.3rem;" id="high-score">nhi milega</div>
+        </div>
+    </div>
+
+    <div class="main-header">
+        <span style="color: #8b949e;">LOG_VIEWER_V3.1</span>
+        <span id="target-hint" style="font-family: monospace; color: #555;">TARGET: [ENCRYPTED]</span>
+    </div>
+        
+    <div class="input-zone">
+        <div class="input-line">
+            <span style="color:var(--neon-blue); font-weight:bold;">&gt;</span>
+            <input type="text" id="user-input" placeholder="INPUT" autofocus autocomplete="off">
+        </div>
+        <span id="no-word">This Word Does Not Exist</span>
+    </div>
+
+
+    <div id="list-container">
+    </div>
+
+
+</div>
+
+<div id="overlay" class="status-box"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -24,7 +24,7 @@
 
         async function myFunction() {
             console.log("Page loaded or refreshed!");
-               const response = await fetch('http://localhost:5000/set_target', {
+               const response = await fetch('/set_target', {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' },
             });
@@ -135,7 +135,7 @@
 
 
 async function isValidWord(word) {
-    const response = await fetch('http://localhost:5000/check_word', {
+    const response = await fetch('/check_word', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ word: word })
@@ -145,7 +145,7 @@ async function isValidWord(word) {
 }
 
 async function calculateSimilarity(word) {
-    const response = await fetch('http://localhost:5000/get_similarity', {
+    const response = await fetch('/get_similarity', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ word: word })
@@ -156,7 +156,7 @@ async function calculateSimilarity(word) {
 }
 
 async function get_target() {
-    const response = await fetch('http://localhost:5000/get_target', {
+    const response = await fetch('/get_target', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
     });
@@ -167,7 +167,7 @@ async function get_target() {
 
 
 async function get_hint1() {
-    const response = await fetch('http://localhost:5000/get_hint1', {
+    const response = await fetch('/get_hint1', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
     });
@@ -177,7 +177,7 @@ async function get_hint1() {
 }
 
 async function get_hint2() {
-    const response = await fetch('http://localhost:5000/get_hint2', {
+    const response = await fetch('/get_hint2', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
     });

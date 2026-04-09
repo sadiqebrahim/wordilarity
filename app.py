@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS  # pip install flask-cors
 import numpy as np
 from main import NounEmbedder, random_word_picker # Import your classes
@@ -11,6 +11,9 @@ emb = NounEmbedder.load()
 current_target = random_word_picker(emb)
 ranks = emb.most_similar(current_target)
 
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 @app.route('/get_hint1', methods=['GET'])
 def get_hint1():
